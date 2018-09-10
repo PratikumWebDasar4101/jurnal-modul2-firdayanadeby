@@ -1,20 +1,20 @@
 <?php
-function baris ($n){
+function garis ($n){
 	if ($n >= 1) {
-		kolom($n);
+		kotak($n);
 		echo "<br>";
 		$n--;
-		baris ($n);
+		garis ($n);
 	}
 }
-function kolom ($baris,$kolom =1){
+function kotak ($garis,$kotak =1){
 	echo "*";
-	$kolom++;
-	if ($kolom <=$baris)
-		kolom ($baris,$kolom);
+	$kotak++;
+	if ($kotak <=$garis)
+		kotak ($garis,$kotak);
 	
 }
-function genap_ganjil ($nilai){
+function ganjil_genap ($nilai){
 	$genap = array();
 	$ganjil = array();
 	for ($b=1; $b <$nilai ; $b++) { 
@@ -40,15 +40,15 @@ function genap_ganjil ($nilai){
 	}
 	echo "<br>";
 	echo "<br>";
-	echo "Jumlah deret genap =". count($genap);
+	echo "Jumlah deret Genap =". count($genap);
 	echo "<br>";
-	echo "Jumlah deret ganjil =". count($ganjil);
+	echo "Jumlah deret Ganjil =". count($ganjil);
 }
 if (isset($_GET ["submit"])) {
 
 		$n = $_GET ["n"];
-		baris($n);
-		genap_ganjil($n);
+		garis($n);
+		ganjil_genap($n);
 }
 
 
